@@ -1,45 +1,47 @@
+
 # AWS & DevOps Portfolio
 
-### By Benazeer Sithara
+### Created by Benazeer Sithara
 
 Welcome to my AWS and DevOps Portfolio!
 
 I am an aspiring AWS DevOps Engineer
-building practical cloud and automation
-projects to develop my technical skills.
+focused on learning cloud computing,
+automation, containerization and CI/CD.
 
 ## Technical Skills
 
-- AWS
-- Linux
+- AWS Cloud
+- Linux Administration
 - Git & GitHub
-- Docker
+- Docker & Docker Hub
 - Jenkins
 - Ansible
 - Terraform
-- CI/CD
 
 ## Projects
 
-| No. | Project | Technologies |
-|---|---|---|
-| 01 | Static Website Deployment | AWS, Docker |
-| 02 | CI/CD Pipeline | Jenkins, GitHub |
-| 03 | Configuration Management | Ansible, Linux |
-| 04 | Three-Tier Architecture | AWS, VPC, RDS |
-| 05 | Infrastructure as Code | Terraform, AWS |
+### Project 1: AWS Static Website Deployment
+Technologies: HTML, CSS, Docker, AWS EC2
 
-## Learning Objectives
+### Project 2: CI/CD Pipeline
+Technologies: Jenkins, GitHub, Docker
 
-- Cloud Infrastructure
-- Containerization
-- Automation
-- Continuous Integration
-- Continuous Deployment
-- Infrastructure as Code
+### Project 3: Ansible Automation
+Technologies: Ansible, Linux
+
+### Project 4: AWS Three-Tier Architecture
+Technologies: AWS VPC, EC2, RDS
+
+### Project 5: Infrastructure as Code
+Technologies: Terraform, AWS
+
+## Career Objective
+
+To build practical skills in AWS Cloud,
+Linux Administration and DevOps automation.
 
 ## Author
 
 Benazeer Sithara
-
 Aspiring AWS DevOps Engineer
