@@ -6,7 +6,7 @@
         stage('SCM checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/benazeersitharashaik-ops/sample1-public.git'
+                    url: 'https://github.com/benazeersitharashaik-ops/html-websites..git'
             }
         }
 
