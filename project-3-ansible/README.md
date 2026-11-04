@@ -1,33 +1,59 @@
-
-# Project 3: Ansible Automation
+# Project 3: Linux Server Automation using Ansible
 
 ## Project Overview
-This project demonstrates server configuration and automation using Ansible.
+This project demonstrates Linux server automation using Ansible on AWS EC2 instances.
 
-## Project Objective
-To automate Linux server administration tasks using Ansible Playbooks.
+Ansible automates server configuration, software installation, service management, and website deployment.
+
+## Architecture
+- Control Node: AWS EC2 – Amazon Linux 2023
+- Managed Nodes: AWS EC2 instances
+- Connection: SSH
+- Automation Tool: Ansible
 
 ## Technologies Used
 - AWS EC2
-- Linux
+- Amazon Linux 2023
 - Ansible
 - YAML
 - SSH
+- Nginx
+- Git and GitHub
 
-## Project Architecture
-Ansible Controller -> SSH -> Managed Nodes
+## Project Tasks
+1. Install Ansible on the control node.
+2. Configure SSH connectivity.
+3. Create an Ansible inventory.
+4. Test connectivity using the Ansible ping module.
+5. Install Nginx on managed servers.
+6. Start and enable Nginx.
+7. Deploy a sample website using an Ansible playbook.
 
-## Implementation Steps
-1. Install Ansible on the controller machine.
-2. Create managed Linux servers.
-3. Configure SSH connectivity.
-4. Create Ansible inventory.
-5. Write Ansible Playbooks.
-6. Execute automation tasks.
-7. Verify the managed servers.
+## Project Files
+- `inventory.ini.example` – Sample managed server inventory.
+- `ansible.cfg` – Ansible configuration.
+- `check-connectivity.yml` – Tests server connectivity.
+- `install-nginx.yml` – Installs and starts Nginx.
+- `deploy-website.yml` – Deploys a sample website.
+
+## Execution Commands
+
+```bash
+ansible --version
+ansible -i inventory.ini webservers -m ping
+ansible-playbook install-nginx.yml
+ansible-playbook deploy-website.yml
+```
 
 ## Expected Outcome
-Automated Linux server configuration and management.
+Automated Nginx installation and sample website deployment on multiple AWS Linux servers.
 
-## Author
-Benazeer Sithara
+## Learning Outcomes
+- Ansible architecture
+- Inventory management
+- SSH configuration
+- YAML playbooks
+- Linux server automation
+- Application deployment
+
+**Project Status:** Documentation and playbook templates prepared. Practical execution and validation pending.
