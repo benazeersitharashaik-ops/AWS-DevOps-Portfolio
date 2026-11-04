@@ -1,25 +1,47 @@
-pipeline {
+ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+
+        stage('SCM checkout') {
             steps {
-                checkout scm
+                git branch: 'main',
+                    url: 'https://github.com/benazeersitharashaik-ops/sample1-public.git'
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Archiving Artifacts') {
             steps {
-                sh 'docker build -t my-cicd-website:latest .'
+                archiveArtifacts artifacts: '**/*.*'
             }
         }
 
-        stage('Run Container') {
+        stage('Deployment') {
             steps {
-                sh '''
-                docker rm -f my-cicd-container || true
-                docker run -d --name my-cicd-container -p 8080:80 my-cicd-website:latest
-                '''
+                sshPublisher(
+                    publishers: [
+                        sshPublisherDesc(
+                            configName: 'website',
+                            transfers: [
+                                sshTransfer(
+                                    sourceFiles: '**/*.*',
+                                    removePrefix: '',
+                                    remoteDirectory: 'www/html',
+                                    flatten: false,
+                                    cleanRemote: false,
+                                    makeEmptyDirs: false,
+                                    noDefaultExcludes: false,
+                                    patternSeparator: '[, ]+',
+                                    execCommand: '',
+                                    execTimeout: 120000
+                                )
+                            ],
+                            usePromotionTimestamp: false,
+                            useWorkspaceInPromotion: false,
+                            verbose: true
+                        )
+                    ]
+                )
             }
         }
     }
