@@ -16,8 +16,3 @@ variable "instance_type" {
   type        = string
   default     = "t3.micro"
 }
-
-variable "my_ip" {
-  description = "Your public IP address in CIDR format"
-  type        = string
-}
